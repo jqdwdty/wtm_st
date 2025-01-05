@@ -32,6 +32,7 @@ jobs:
           else
             echo "GitHub CLI is already installed."
             gh --version
+          fi
 
       - name: Authenticate GitHub CLI
         run: echo "${{ secrets.GH_PAT }}" | gh auth login --with-token
